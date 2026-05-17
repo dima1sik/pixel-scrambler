@@ -1,4 +1,4 @@
-const ui = {
+﻿const ui = {
   imageInput: document.getElementById("imageInput"),
   fileSelectBtn: document.getElementById("fileSelectBtn"),
   fileNameText: document.getElementById("fileNameText"),
@@ -66,7 +66,7 @@ function getWrongSeed() {
 
 function hasLoadedImage() {
   if (!currentImage) {
-    setStatus("najpierw wczytaj obraz");
+    setStatus("load an image first");
     return false;
   }
   return true;
@@ -116,7 +116,7 @@ function formatNumber(value) {
 
 function downloadCanvas(canvas, filename) {
   if (canvas.width === 0 || canvas.height === 0) {
-    setStatus("brak obrazu do zapisania");
+    setStatus("no image to save");
     return;
   }
 
@@ -489,7 +489,7 @@ function handleLoadedImage(image) {
 
   resetMetrics();
   updateOriginalMetric();
-  setStatus("obraz zostal wczytany");
+  setStatus("image loaded");
 }
 
 function loadImageFromFile(file) {
@@ -512,8 +512,8 @@ function handleFileChange(event) {
   const file = event.target.files[0];
 
   if (!file) {
-    ui.fileNameText.textContent = "Nie wybrano pliku";
-    setStatus("nie wybrano obrazu");
+    ui.fileNameText.textContent = "No file selected";
+    setStatus("no image selected");
     return;
   }
 
@@ -541,7 +541,7 @@ function handleScramble() {
   resetRestoreMetrics();
 
   updateScrambledMetric(scrambledImage);
-  setStatus("wykonano Scramble dla etapu " + stage);
+  setStatus("Scramble completed for stage " + stage);
 }
 
 function handleUnscramble(seed, modeText, statusSuffix) {
@@ -557,7 +557,7 @@ function handleUnscramble(seed, modeText, statusSuffix) {
   putImageData(ctx.restored, restoredImage);
 
   updateRestoreMetrics(restoredImage, modeText);
-  setStatus("wykonano Unscramble dla etapu " + stage + " " + statusSuffix);
+  setStatus("Unscramble completed for stage " + stage + " " + statusSuffix);
 }
 
 function saveCanvasWithStage(canvas, filenamePrefix, successMessage) {
@@ -577,21 +577,23 @@ ui.imageInput.addEventListener("change", handleFileChange);
 ui.scrambleBtn.addEventListener("click", handleScramble);
 
 ui.unscrambleBtn.addEventListener("click", function () {
-  handleUnscramble(getCorrectSeed(), "poprawny klucz", "przy poprawnym kluczu");
+  handleUnscramble(getCorrectSeed(), "correct key", "with the correct key");
 });
 
 ui.wrongUnscrambleBtn.addEventListener("click", function () {
-  handleUnscramble(getWrongSeed(), "bledny klucz", "przy blednym kluczu");
+  handleUnscramble(getWrongSeed(), "wrong key", "with the wrong key");
 });
 
 ui.saveScrambledBtn.addEventListener("click", function () {
-  saveCanvasWithStage(canvases.scrambled, "scrambled_stage_", "zapisano obraz scrambled");
+  saveCanvasWithStage(canvases.scrambled, "scrambled_stage_", "scrambled image saved");
 });
 
 ui.saveRestoredBtn.addEventListener("click", function () {
-  saveCanvasWithStage(canvases.restored, "restored_stage_", "zapisano obraz restored");
+  saveCanvasWithStage(canvases.restored, "restored_stage_", "restored image saved");
 });
 
 ui.saveDifferenceBtn.addEventListener("click", function () {
-  saveCanvasWithStage(canvases.difference, "difference_stage_", "zapisano obraz difference");
+  saveCanvasWithStage(canvases.difference, "difference_stage_", "difference image saved");
 });
+
+

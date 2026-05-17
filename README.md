@@ -1,49 +1,49 @@
-# Mini 2 - Image Scrambling
+﻿# Mini 2 - Image Scrambling
 
-Projekt edukacyjny dotyczacy transformacji cyfrowego obrazu.
+Educational project about digital image transformation.
 
-## Cel projektu
+## Project Goal
 
-Celem projektu jest stworzenie aplikacji, ktora pokazuje dzialanie kilku etapow scramblingu i unscramblingu obrazu.  
-Projekt nie jest traktowany jako bezpieczny system szyfrowania, lecz jako eksperyment dydaktyczny.
+The goal of this project is to build an application that demonstrates several stages of image scrambling and unscrambling.  
+This project is not intended to be a secure encryption system, but an educational experiment.
 
-## Zaimplementowane etapy
+## Implemented Stages
 
-### Etap 1 - Naiwny scrambling
+### Stage 1 - Naive scrambling
 - przesuniecia wierszy i kolumn,
-- pelna odwracalnosc przy poprawnym kluczu,
-- wyrazne ograniczenia bezpieczenstwa.
+- full reversibility with the correct key,
+- clear security limitations.
 
-### Etap 2 - Czysta permutacja
+### Stage 2 - Pure permutation
 - permutacja pikseli sterowana seedem,
 - osobna permutacja odwrotna,
-- poprawne odtwarzanie obrazu przy wlasciwym kluczu.
+- correct image restoration with the proper key.
 
-### Etap 3 - Wersja wzmocniona
+### Stage 3 - Enhanced version
 - permutacja pikseli,
 - dodatkowa odwracalna substytucja wartosci RGB,
-- poprawne odtwarzanie obrazu przy wlasciwym kluczu.
+- correct image restoration with the proper key.
 
-## Funkcje aplikacji
+## Application Features
 
-- wczytywanie obrazu PNG / JPEG / BMP,
-- wybor etapu 1 / 2 / 3,
-- uzycie poprawnego i blednego klucza,
+- loading PNG / JPEG / BMP images,
+- stage selection: 1 / 2 / 3,
+- using correct and wrong keys,
 - przyciski Scramble i Unscramble,
-- osobny test unscramblingu z blednym kluczem,
+- separate unscrambling test with a wrong key,
 - wyswietlanie:
-  - obrazu oryginalnego,
-  - obrazu scrambled,
-  - obrazu restored,
+  - original image,
+  - scrambled image,
+  - restored image,
   - difference image,
-- zapis wynikow do plikow PNG,
-- podstawowe metryki analityczne.
+- saving results to PNG files,
+- basic analytical metrics.
 
-## Metryki
+## Metrics
 
-Aplikacja oblicza:
-- korelacje pozioma pikseli dla obrazu oryginalnego,
-- korelacje pozioma pikseli dla obrazu scrambled,
+The application calculates:
+- korelacje pozioma pikseli dla original image,
+- horizontal pixel correlation for the scrambled image,
 - MSE dla porownania restored vs original,
 - informacje, czy restored jest dokladnie rowny original.
 
@@ -54,15 +54,21 @@ Aplikacja oblicza:
 - JavaScript
 - Canvas API
 
-## Uruchomienie projektu
+## How to Run
 
-1. Otworzyc folder projektu w Visual Studio Code.
-2. Uruchomic plik index.html przez Live Server.
-3. Wczytac obraz.
-4. Wybrac etap i klucz.
-5. Uzyc przyciskow Scramble, Unscramble lub Unscramble (bledny klucz).
+1. Open the project folder in Visual Studio Code.
+2. Run index.html using Live Server.
+3. Load an image.
+4. Select a stage and a key.
+5. Use the Scramble, Unscramble, or Unscramble (wrong key) buttons.
 
 ## Uwagi
 
-Projekt ma charakter edukacyjny.  
-Celem bylo pokazanie roznicy miedzy prostym scramblingiem, czysta permutacja oraz wersja wzmocniona, a takze analiza ograniczen takiego rozwiazania.
+This is an educational project.  
+The goal was to demonstrate the difference between simple scrambling, pure permutation, and an enhanced version, as well as to analyze the limitations of this approach.
+
+
+
+
+
+

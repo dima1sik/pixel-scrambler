@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
@@ -9,117 +9,117 @@
 <body>
   <div class="container">
     <header class="hero">
-      <div class="hero-badge">Mini Projekt 2</div>
+      <div class="hero-badge">Mini Project 2</div>
       <h1>Image Scrambling Analyzer</h1>
       <p class="hero-text">
-        Aplikacja do analizy trzech etapów scramblingu i unscramblingu obrazu cyfrowego.
+        A web application for analyzing three stages of digital image scrambling and unscrambling.
       </p>
     </header>
 
     <section class="toolbar">
       <div class="toolbar-card">
-        <h2>Obraz i etap</h2>
+        <h2>Image and Stage</h2>
 
         <div class="field">
-          <label for="imageInput">Wczytaj obraz</label>
+          <label for="imageInput">Load Image</label>
           <div class="custom-file-upload">
             <input type="file" id="imageInput" accept="image/png, image/jpeg, image/bmp" />
-            <button type="button" id="fileSelectBtn">Wybierz plik</button>
-            <span id="fileNameText">Nie wybrano pliku</span>
+            <button type="button" id="fileSelectBtn">Choose File</button>
+            <span id="fileNameText">No file selected</span>
           </div>
         </div>
 
         <div class="field">
-          <label for="stageSelect">Wybierz etap</label>
+          <label for="stageSelect">Select stage</label>
           <select id="stageSelect">
-            <option value="1">Etap 1 - Naiwny scrambling</option>
-            <option value="2">Etap 2 - Czysta permutacja</option>
-            <option value="3">Etap 3 - Wersja wzmocniona</option>
+            <option value="1">Stage 1 - Naive scrambling</option>
+            <option value="2">Stage 2 - Pure permutation</option>
+            <option value="3">Stage 3 - Enhanced version</option>
           </select>
         </div>
       </div>
 
       <div class="toolbar-card">
-        <h2>Klucze</h2>
+        <h2>Keys</h2>
 
         <div class="field">
-          <label for="seedInput">Poprawny klucz / seed</label>
+          <label for="seedInput">Correct key / seed</label>
           <input type="text" id="seedInput" value="12345" />
         </div>
 
         <div class="field">
-          <label for="wrongSeedInput">Błędny klucz / seed</label>
+          <label for="wrongSeedInput">Wrong key / seed</label>
           <input type="text" id="wrongSeedInput" value="12346" />
         </div>
       </div>
 
       <div class="toolbar-card toolbar-card-wide">
-        <h2>Operacje</h2>
+        <h2>Operations</h2>
 
         <div class="actions">
           <button id="scrambleBtn">Scramble</button>
           <button id="unscrambleBtn">Unscramble</button>
-          <button id="wrongUnscrambleBtn">Unscramble (błędny klucz)</button>
-          <button id="saveScrambledBtn">Zapisz obraz scrambled</button>
-          <button id="saveRestoredBtn">Zapisz obraz restored</button>
-          <button id="saveDifferenceBtn">Zapisz difference</button>
+          <button id="wrongUnscrambleBtn">Unscramble (wrong key)</button>
+          <button id="saveScrambledBtn">Save Scrambled Image</button>
+          <button id="saveRestoredBtn">Save Restored Image</button>
+          <button id="saveDifferenceBtn">Save Difference Image</button>
         </div>
       </div>
     </section>
 
     <section class="canvas-grid">
       <article class="canvas-card">
-        <div class="card-title">Obraz oryginalny</div>
+        <div class="card-title">Original Image</div>
         <canvas id="originalCanvas"></canvas>
       </article>
 
       <article class="canvas-card">
-        <div class="card-title">Obraz scrambled</div>
+        <div class="card-title">Scrambled Image</div>
         <canvas id="scrambledCanvas"></canvas>
       </article>
 
       <article class="canvas-card">
-        <div class="card-title">Obraz restored</div>
+        <div class="card-title">Restored Image</div>
         <canvas id="restoredCanvas"></canvas>
       </article>
 
       <article class="canvas-card">
-        <div class="card-title">Obraz różnicowy</div>
+        <div class="card-title">Difference Image</div>
         <canvas id="differenceCanvas"></canvas>
       </article>
     </section>
 
     <section class="status-card">
       <div class="section-title">Status</div>
-      <p id="statusText">Status: oczekiwanie na wczytanie obrazu</p>
+      <p id="statusText">Status: waiting for image upload</p>
     </section>
 
     <section class="metrics-card">
-      <div class="section-title">Metryki</div>
+      <div class="section-title">Metrics</div>
 
       <div class="metrics-grid">
         <div class="metric-box">
-          <div class="metric-name">Korelacja pozioma (oryginał)</div>
+          <div class="metric-name">Horizontal Correlation (Original)</div>
           <div class="metric-number" id="originalCorrValue">-</div>
         </div>
 
         <div class="metric-box">
-          <div class="metric-name">Korelacja pozioma (scrambled)</div>
+          <div class="metric-name">Horizontal Correlation (Scrambled)</div>
           <div class="metric-number" id="scrambledCorrValue">-</div>
         </div>
 
         <div class="metric-box">
-          <div class="metric-name">Tryb ostatniego odtworzenia</div>
+          <div class="metric-name">Last Restoration Mode</div>
           <div class="metric-number" id="restoreModeValue">-</div>
         </div>
 
         <div class="metric-box">
-          <div class="metric-name">MSE restored vs original</div>
+          <div class="metric-name">MSE: Restored vs Original</div>
           <div class="metric-number" id="restoredMseValue">-</div>
         </div>
 
         <div class="metric-box">
-          <div class="metric-name">Czy restored = original</div>
+          <div class="metric-name">Restored Equals Original</div>
           <div class="metric-number" id="exactRestoreValue">-</div>
         </div>
       </div>
@@ -129,3 +129,5 @@
   <script src="app.js"></script>
 </body>
 </html>
+
+
