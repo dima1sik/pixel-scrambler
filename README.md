@@ -31,6 +31,3 @@ It is an educational project and is not intended to be a secure encryption syste
 3. For best results, use Live Server in Visual Studio Code.
 4. Load an image and test scrambling / unscrambling.
 
-## Status
-
-Finished educational web project prepared for GitHub portfolio.
