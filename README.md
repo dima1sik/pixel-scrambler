@@ -1,4 +1,4 @@
-﻿# Mini 2 - Image Scrambling
+﻿# Pixel Scrambler Lab
 
 Educational project about digital image transformation.
 
@@ -66,6 +66,7 @@ The application calculates:
 
 This is an educational project.  
 The goal was to demonstrate the difference between simple scrambling, pure permutation, and an enhanced version, as well as to analyze the limitations of this approach.
+
 
 
 
