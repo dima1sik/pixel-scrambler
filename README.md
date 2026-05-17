@@ -1,4 +1,4 @@
-# Pixel Scrambler Lab
+﻿# Pixel Scrambler Lab
 
 Pixel Scrambler Lab is a browser-based image scrambling and unscrambling experiment.
 
@@ -38,10 +38,7 @@ JavaScript / CSS files
 3. For best results, use Live Server in Visual Studio Code.
 4. Load an image and test scrambling or unscrambling.
 
-## Status
-
-Portfolio / educational web project.
-
 ## Notes
 
 This is an educational image-processing experiment and is not intended to be a secure encryption system.
+
